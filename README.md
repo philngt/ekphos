@@ -8,6 +8,24 @@ A lightweight, fast, terminal-based markdown research tool built with Rust.
 
 ![Ekphos Preview](examples/ekphos-screenshot.png)
 
+## Optional browser UI
+
+This fork also includes a local-first browser workspace in [`web/`](web/README.md):
+folder navigation, search, Markdown editing/preview, backlinks, and a knowledge
+graph. The Rust terminal application remains unchanged, and both interfaces use
+ordinary Markdown files in your chosen vault.
+
+```bash
+python3 -m http.server 4173 --bind 127.0.0.1 --directory web
+```
+
+Open **http://127.0.0.1:4173** and choose **Open vault**. Desktop browsers supporting
+File System Access can save directly with permission; other browsers use read-only
+folder import and export copies. No npm install or Rust build is needed to run the
+UI. See the [browser UI guide](web/README.md) for supported Markdown, draft/conflict
+handling, resource limits, and tests. This is a separate optional frontend, not full
+TUI feature parity or a new CLI flag.
+
 ## Documentation
 
 **Go to [Documentation](https://ekphos.nostacks.xyz/docs)**

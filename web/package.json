@@ -1,0 +1,12 @@
+{
+  "name": "@ekphos/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first browser companion for Ekphos",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "check": "node --check core.mjs && node --check vault.mjs && node --check app.mjs",
+    "test": "node --test tests/core.test.mjs tests/vault.test.mjs"
+  }
+}
